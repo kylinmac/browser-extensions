@@ -11,6 +11,19 @@ zip -r -q "$OUT" \
   manifest.json background.js content.js popup icons _locales \
   -x '*.DS_Store' '*/.*'
 
+# 自检：商店字段长度（Chrome/Edge: name<=75, description<=132）
+python3 - <<'LEN'
+import glob, json, sys
+bad = []
+for f in sorted(glob.glob('_locales/*/messages.json')):
+    m = json.load(open(f))
+    for key, limit in (('extName', 75), ('extDesc', 132)):
+        if key in m and len(m[key]['message']) > limit:
+            bad.append(f"{f} {key}: {len(m[key]['message'])} > {limit}")
+if bad:
+    print('商店字段超长:'); [print('  ', b) for b in bad]; sys.exit(1)
+LEN
+
 # 自检：manifest 引用的东西必须都在包里
 python3 - "$OUT" <<'CHECK'
 import json, sys, zipfile
