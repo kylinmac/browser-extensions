@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body {
+  width: 300px;
+  margin: 0;
+  padding: 14px;
+  font: 13px/1.5 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #1b1d21;
+  color: #e6e7e9;
+}
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+h1 { font-size: 14px; font-weight: 600; margin: 0; }
+
+.switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: #3a3d44; border-radius: 22px; transition: background .15s;
+}
+.slider::before {
+  content: ""; position: absolute; height: 16px; width: 16px; left: 3px; top: 3px;
+  background: #fff; border-radius: 50%; transition: transform .15s;
+}
+.switch input:checked + .slider { background: #4f8cff; }
+.switch input:checked + .slider::before { transform: translateX(18px); }
+
+.site { padding: 10px; background: #24262b; border-radius: 8px; margin-bottom: 12px; }
+.site-host { font-weight: 600; margin-bottom: 8px; word-break: break-all; }
+.seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.seg button {
+  padding: 6px 0; font-size: 12px; cursor: pointer;
+  background: #31343a; color: #cfd2d6; border: 1px solid transparent; border-radius: 6px;
+}
+.seg button:hover { background: #3a3d44; }
+.seg button.active { background: #4f8cff; color: #fff; }
+.hint { margin: 8px 0 0; font-size: 11px; color: #9aa0a6; min-height: 16px; }
+
+.opts { display: flex; flex-direction: column; gap: 10px; }
+.row { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: #c3c7cc; }
+.row > span { display: flex; justify-content: space-between; }
+.row b { color: #fff; font-weight: 600; }
+select {
+  background: #24262b; color: #e6e7e9; border: 1px solid #3a3d44;
+  border-radius: 6px; padding: 5px; font-size: 12px;
+}
+input[type=range] { width: 100%; accent-color: #4f8cff; }
+
+footer { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
+.link { background: none; border: none; color: #4f8cff; cursor: pointer; padding: 0; font-size: 12px; }
+.kbd { font-size: 11px; color: #777c85; }

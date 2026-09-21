@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1 data-i18n="popupTitle"></h1>
+    <label class="switch" data-i18n-title="globalToggle">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="site">
+    <div class="site-host" id="host">—</div>
+    <div class="seg" id="siteSeg">
+      <button data-v="default" data-i18n="siteFollow"></button>
+      <button data-v="on" data-i18n="siteOn"></button>
+      <button data-v="off" data-i18n="siteOff"></button>
+      <button data-v="force" data-i18n="siteForce" data-i18n-title="siteForceTip"></button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </section>
+
+  <section class="opts">
+    <label class="row">
+      <span data-i18n="mode"></span>
+      <select id="mode">
+        <option value="auto" data-i18n="modeAuto"></option>
+        <option value="force" data-i18n="modeForce"></option>
+      </select>
+    </label>
+
+    <label class="row slider-row">
+      <span><span data-i18n="brightness"></span> <b id="brightnessVal">100%</b></span>
+      <input type="range" id="brightness" min="50" max="150" step="5">
+    </label>
+    <label class="row slider-row">
+      <span><span data-i18n="contrast"></span> <b id="contrastVal">100%</b></span>
+      <input type="range" id="contrast" min="50" max="150" step="5">
+    </label>
+    <label class="row slider-row">
+      <span><span data-i18n="grayscale"></span> <b id="grayscaleVal">0%</b></span>
+      <input type="range" id="grayscale" min="0" max="100" step="5">
+    </label>
+    <label class="row slider-row">
+      <span><span data-i18n="sepia"></span> <b id="sepiaVal">0%</b></span>
+      <input type="range" id="sepia" min="0" max="60" step="5">
+    </label>
+  </section>
+
+  <footer>
+    <button id="reset" class="link" data-i18n="reset"></button>
+    <span class="kbd" data-i18n="shortcutHint"></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
