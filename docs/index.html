@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>浏览器插件</title>
+<style>
+  :root { --bg:#fff; --fg:#1c1e21; --muted:#5c6166; --card:#f6f7f8; --line:#e3e5e8; --accent:#2f6feb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181a; --fg:#e6e7e9; --muted:#9aa0a6; --card:#1e2124; --line:#2e3237; --accent:#6ea0ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); padding:48px 16px 80px;
+         font:16px/1.7 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:720px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  p.sub { color:var(--muted); margin:0 0 36px; }
+  .item { background:var(--card); border:1px solid var(--line); border-radius:10px;
+          padding:18px 20px; margin-bottom:14px; }
+  .item h2 { font-size:18px; margin:0 0 6px; }
+  .item p { margin:0 0 10px; color:var(--muted); font-size:15px; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .links a { margin-right:16px; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>浏览器插件</h1>
+  <p class="sub">自用扩展合集，每个插件一个目录，各自独立打包发布。</p>
+
+  <div class="item">
+    <h2>Force Dark</h2>
+    <p>强制任何网站进入深色模式，无论其自身是否有深色主题。Chrome / Edge，Manifest V3。</p>
+    <div class="links">
+      <a href="https://github.com/kylinmac/browser-extensions/tree/main/force-dark">源码</a>
+      <a href="force-dark/privacy-policy.html">隐私政策</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

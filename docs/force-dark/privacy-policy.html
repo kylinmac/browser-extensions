@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Force Dark — 隐私政策 / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1e21; --muted: #5c6166;
+    --card: #f6f7f8; --line: #e3e5e8; --accent: #2f6feb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a; --fg: #e6e7e9; --muted: #9aa0a6;
+      --card: #1e2124; --line: #2e3237; --accent: #6ea0ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.75 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    padding: 48px 16px 80px;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 36px; }
+  .lead { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+          padding: 18px 20px; font-weight: 600; }
+  ul { padding-left: 22px; }
+  li { margin: 10px 0; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+         padding: 1px 6px; font-size: 14px; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Force Dark — 隐私政策 / Privacy Policy</h1>
+  <p class="updated">最后更新 / Last updated: 2026-09-20</p>
+
+  <p class="lead">Force Dark 不收集、不存储、不传输任何用户数据。<br>
+  Force Dark does not collect, store, or transmit any user data.</p>
+
+  <h2>中文</h2>
+  <ul>
+    <li>扩展没有任何网络请求，不会把任何信息发送到任何服务器。</li>
+    <li>你的设置（总开关、按站点规则、亮度等滑块数值）通过浏览器的
+        <code>chrome.storage.local</code> 保存在你自己的设备上，随时可以在扩展中重置。</li>
+    <li>扩展不读取、不记录、不上传你浏览的网页内容、表单输入或浏览历史。</li>
+    <li>扩展需要“在所有网站上读取和更改数据”的权限，仅用于向页面注入一段 CSS 样式，
+        以及读取页面的背景色来判断该页面是否本来就是深色。</li>
+  </ul>
+
+  <h2>English</h2>
+  <ul>
+    <li>The extension makes no network requests of any kind.</li>
+    <li>Your settings (global toggle, per-site rules, slider values) are stored on your own
+        device via <code>chrome.storage.local</code> and can be reset at any time.</li>
+    <li>The extension does not read, log, or upload page content, form input, or browsing history.</li>
+    <li>The “read and change data on all websites” permission is used solely to inject a
+        stylesheet and to read a page’s computed background color in order to detect pages
+        that are already dark.</li>
+  </ul>
+
+  <h2>联系方式 / Contact</h2>
+  <p>邮箱 / Email: <a href="mailto:lustremac@outlook.com">lustremac@outlook.com</a></p>
+
+  <footer>
+    源码 / Source: <a href="https://github.com/kylinmac/browser-extensions">github.com/kylinmac/browser-extensions</a>
+  </footer>
+</main>
+</body>
+</html>
